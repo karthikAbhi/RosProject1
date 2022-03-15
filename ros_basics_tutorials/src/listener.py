@@ -14,6 +14,9 @@ def callback(data):
                     data.id, data.name, data.temperature, data.humidity
                     )
 
+'''
+Listener Function
+'''
 def listener():
     rospy.init_node('listener', anonymous=True)
     rospy.Subscriber("iot_sensor_topic", IoTSensor, callback)
